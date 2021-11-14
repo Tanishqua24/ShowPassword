@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show and hide password</title>
+    <style>
+        body {
+            background-color: rgb(95, 51, 136);
+        }
+        
+        div {
+            width: 500px;
+            padding: 30px;
+            margin: 300px auto;
+            background-color: whitesmoke;
+        }
+        
+        button {
+            padding: 10px;
+        }
+        
+        input {
+            padding: 10px;
+            /* margin: 0px 0px 0px 10px; */
+        }
+    </style>
+    <script>
+        function fnShowHidePassword() {
+            var inputRef = document.getElementById("i1");
+            var buttonRef = document.querySelector(".btn");
+            if (inputRef.type == "password") {
+                inputRef.type = "text";
+                buttonRef.innerText = "Hide Password";
+            } else {
+                inputRef.type = "password";
+                buttonRef.innerText = "Show Password";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <lable>Enter Text</lable>
+
+        <input type="password" id="i1" />
+        <button onclick="fnShowHidePassword()" class="btn">Show Password</button>
+    </div>
+</body>
+
+</html>
